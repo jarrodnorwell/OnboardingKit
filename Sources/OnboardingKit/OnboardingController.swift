@@ -96,10 +96,17 @@ public class OnboardingController : UIViewController {
         tintingVisualEffectView.translatesAutoresizingMaskIntoConstraints = false
         visualEffectView.contentView.addSubview(tintingVisualEffectView)
         
-        tintingVisualEffectView.topAnchor.constraint(equalTo: visualEffectView.contentView.topAnchor, constant: 20).isActive = true
-        tintingVisualEffectView.leadingAnchor.constraint(equalTo: visualEffectView.contentView.leadingAnchor, constant: 20).isActive = true
-        tintingVisualEffectView.bottomAnchor.constraint(equalTo: visualEffectView.contentView.bottomAnchor, constant: -20).isActive = true
-        tintingVisualEffectView.trailingAnchor.constraint(equalTo: visualEffectView.contentView.trailingAnchor, constant: -20).isActive = true
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            tintingVisualEffectView.topAnchor.constraint(equalTo: visualEffectView.contentView.topAnchor, constant: 20).isActive = true
+            tintingVisualEffectView.bottomAnchor.constraint(equalTo: visualEffectView.contentView.bottomAnchor, constant: -20).isActive = true
+            tintingVisualEffectView.widthAnchor.constraint(equalTo: visualEffectView.contentView.widthAnchor, multiplier: 1 / 2).isActive = true
+            tintingVisualEffectView.centerXAnchor.constraint(equalTo: visualEffectView.contentView.centerXAnchor).isActive = true
+        } else {
+            tintingVisualEffectView.topAnchor.constraint(equalTo: visualEffectView.contentView.topAnchor, constant: 20).isActive = true
+            tintingVisualEffectView.leadingAnchor.constraint(equalTo: visualEffectView.contentView.leadingAnchor, constant: 20).isActive = true
+            tintingVisualEffectView.bottomAnchor.constraint(equalTo: visualEffectView.contentView.bottomAnchor, constant: -20).isActive = true
+            tintingVisualEffectView.trailingAnchor.constraint(equalTo: visualEffectView.contentView.trailingAnchor, constant: -20).isActive = true
+        }
         
         let label: UILabel = .init()
         label.translatesAutoresizingMaskIntoConstraints = false
