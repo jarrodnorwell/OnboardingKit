@@ -226,7 +226,7 @@ public class OnboardingController : UIViewController {
     }
     
     public var animationHasPlayed: Bool = false
-    public override func viewWillLayoutSubviews() {
+    public override open func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         if !animationHasPlayed && !configuration.useCustomSymbolEffect {
             guard let imageView else {
