@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-public open class OnboardingController : UIViewController {
+open class OnboardingController : UIViewController {
     public struct Onboarding {
         public struct Button {
             public typealias Handler = ((UIButton, UIViewController) async -> Void)
