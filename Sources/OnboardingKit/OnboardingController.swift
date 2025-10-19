@@ -139,7 +139,7 @@ open class OnboardingController : UIViewController {
         imageView.centerXAnchor.constraint(equalTo: topCenteringView.safeAreaLayoutGuide.centerXAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: topCenteringView.safeAreaLayoutGuide.centerYAnchor).isActive = true
         imageView.widthAnchor.constraint(equalTo: topCenteringView.safeAreaLayoutGuide.widthAnchor,
-                                         multiplier: 1 / 2).isActive = true
+                                         multiplier: 2 / 3).isActive = true
         imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
         
         let secondaryLabel: UILabel = .init()
