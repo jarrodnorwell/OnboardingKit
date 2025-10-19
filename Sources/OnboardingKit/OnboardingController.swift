@@ -133,7 +133,7 @@ open class OnboardingController : UIViewController {
             return
         }
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         topCenteringView.addSubview(imageView)
         
         imageView.centerXAnchor.constraint(equalTo: topCenteringView.safeAreaLayoutGuide.centerXAnchor).isActive = true
