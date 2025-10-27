@@ -111,6 +111,7 @@ open class OnboardingController : UIViewController {
         let label: UILabel = .init()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .bold(.extraLargeTitle)
+        label.numberOfLines = 2
         label.text = configuration.text
         label.textAlignment = .center
         tintingVisualEffectView.contentView.addSubview(label)
