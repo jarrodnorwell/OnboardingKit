@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeshGradientView: View {
+public struct MeshGradientView: View {
     var colours: [Color]
     
     private let points: [SIMD2<Float>] = [
@@ -16,7 +16,7 @@ struct MeshGradientView: View {
         .init(0.0, 1.0), .init(0.5, 1.0), .init(1.0, 1.0)
     ]
     
-    init(colours: [Color] = Color.vibrantGreens) {
+    public init(colours: [Color] = Color.vibrantGreens) {
         self.colours = colours
     }
     
