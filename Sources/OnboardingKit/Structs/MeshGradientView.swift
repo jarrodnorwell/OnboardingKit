@@ -20,7 +20,7 @@ public struct MeshGradientView: View {
         self.colours = colours
     }
     
-    var body: some View {
+    public var body: some View {
         TimelineView(.animation) { timeline in
             MeshGradient(width: 3, height: 3, locations: .points(points), colors: .colors(animated(for: timeline.date)), background: .black, smoothsColors: true)
         }
